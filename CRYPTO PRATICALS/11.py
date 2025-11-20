@@ -30,3 +30,13 @@ if __name__ == "__main__":
     print("\nInterpretation:")
     print(f" - Ignoring equivalent keys: ~25! ≈ 2^{log2_25_fact:.2f}")
     print(f" - Accounting for a simple division by 25 (~cyclic shifts): ~25!/25 = 24! ≈ 2^{log2_24_fact:.2f}")
+
+output:
+25! = ≈2^83.681514
+24! = ≈2^79.037657
+25! = ≈ 1.551121e+25
+24! = ≈ 6.204484e+23
+
+Interpretation:
+- Ignoring equivalent keys: ~25! = 2^83.68
+- Accounting for a simple division by 25 (~cyclic shifts): ~25!/25 = 24! = ≈2^79.04
