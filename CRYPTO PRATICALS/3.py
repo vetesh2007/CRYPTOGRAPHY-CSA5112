@@ -42,3 +42,9 @@ matrix = generate_matrix(keyword)
 plaintext = input("Enter plaintext: ")
 ciphertext = playfair_encrypt(plaintext, matrix)
 print("Ciphertext:", ciphertext)
+
+output:
+Enter keyword: MONARCHY
+Enter plaintext: INSTRUMENTS
+Ciphertext: GATLMZCLRQXA
+
