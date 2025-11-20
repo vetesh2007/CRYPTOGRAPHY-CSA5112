@@ -24,3 +24,7 @@ keyword = "CIPHER"
 plaintext = input("Enter plaintext: ")
 ciphertext = encrypt_keyword_cipher(plaintext, keyword)
 print("Ciphertext:", ciphertext)
+
+output:
+Enter plaintext: AFFINECIPHER
+Ciphertext: CRRDLEPDNBEQ
