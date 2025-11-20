@@ -45,3 +45,42 @@ if __name__ == "__main__":
     print("\nRecovered keystream for target (positions 0..{}):".format(L-1))
     recovered = recover_keystream(ct_for_recovery[:L], target[:L])
     print("Recovered keystream (first {} items):".format(L), recovered)
+
+output:
+Plaintext (letters only): SENDMOREMONEY
+
+Encryption:
+p=S(18) k= 9 -> c=B( 1)
+p=E( 4) k= 0 -> c=E( 4)
+p=N(13) k= 1 -> c=O(14)
+p=D( 3) k= 7 -> c=K(10)
+p=M(12) k=23 -> c=J( 9)
+p=O(14) k=15 -> c=D( 3)
+p=R(17) k=21 -> c=M(12)
+p=E( 4) k=14 -> c=S(18)
+p=M(12) k=11 -> c=X(23)
+p=O(14) k=11 -> c=Z(25)
+p=N(13) k= 2 -> c=P(15)
+p=E( 4) k= 8 -> c=M(12)
+p=Y(24) k= 9 -> c=H( 7)
+
+Ciphertext: BBQKJDMSXZPMH
+
+--- Key recovery example ---
+Target plaintext: CASHNOTNEEDED
+
+Recovered keystream for target (positions 0..12):
+pos 0: c=B( 1) p=C( 2) -> k=25
+pos 1: c=E( 4) p=A( 0) -> k= 4
+pos 2: c=O(14) p=S(18) -> k=22
+pos 3: c=K(10) p=H( 7) -> k= 3
+pos 4: c=J( 9) p=N(13) -> k=22
+pos 5: c=D( 3) p=O(14) -> k=15
+pos 6: c=M(12) p=T(19) -> k=19
+pos 7: c=S(18) p=N(13) -> k= 5
+pos 8: c=X(23) p=E( 4) -> k=19
+pos 9: c=Z(25) p=E( 4) -> k=21
+pos 10: c=P(15) p=D( 3) -> k=12
+pos 11: c=M(12) p=E( 4) -> k= 8
+pos 12: c=H( 7) p=D( 3) -> k= 4
+Recovered keystream (first 13 items): [25, 4, 22, 3, 22, 15, 19, 5, 19, 21, 12, 8, 4]
