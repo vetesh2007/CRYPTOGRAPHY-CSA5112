@@ -16,3 +16,9 @@ plaintext = input("Enter plaintext: ")
 key = input("Enter key: ")
 ciphertext = vigenere_encrypt(plaintext, key)
 print("Ciphertext:", ciphertext)
+
+output:
+Enter plaintext: ATTACKATDAWN
+Enter key: LEMON
+Ciphertext: LXFOPVEFRNHR
+
